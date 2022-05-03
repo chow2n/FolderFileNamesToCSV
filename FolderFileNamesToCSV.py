@@ -4,9 +4,9 @@ import pandas as pd
 # Create empty list to store data for Pandas DataFrame
 data = []
 
-# Use os.listdir to iterate through the folder names and file names
-for folder in sorted(os.listdir('C:\QL Clustering\MortgageCoupons')):
-    for file in sorted(os.listdir('C:\QL Clustering\MortgageCoupons/' + folder)):
+# Use os.listdir to iterate through the folder names and file names in file path
+for folder in sorted(os.listdir(filepath)):
+    for file in sorted(os.listdir(filepath + folder)):
     # Use .endswith to filter only ".pdf" and ".tiff" file extension names
         if file.endswith((".pdf", ".tiff")):
             data.append((folder, file))
